@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
+
+  .section-muted {
+    @apply flex-1 bg-zinc-50 py-12 md:py-16;
+  }
+
+  .card {
+    @apply rounded-xl border border-zinc-200 bg-white shadow-sm;
+  }
+
+  .card-hover {
+    @apply rounded-xl border border-zinc-200 bg-white shadow-sm transition hover:border-zinc-300 hover:shadow-md;
+  }
+
+  .heading-md {
+    @apply text-lg font-semibold text-zinc-950;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-zinc-700 mb-1.5;
+  }
+
+  .filter-pill-active {
+    @apply rounded-full bg-zinc-950 px-4 py-2 text-sm font-medium text-white transition;
+  }
+
+  .filter-pill-inactive {
+    @apply rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-700 transition hover:border-zinc-300 hover:bg-zinc-50;
+  }
+
+  .input {
+    @apply rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 shadow-sm outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20;
+  }
+
+  .input-modern {
+    @apply w-full rounded-xl border border-zinc-200 bg-zinc-50/50 px-4 py-3 text-sm text-zinc-900 outline-none transition placeholder:text-zinc-400 focus:border-orange-500 focus:bg-white focus:ring-4 focus:ring-orange-500/10;
+  }
+
+  .time-slot-active {
+    @apply rounded-xl border-2 border-orange-500 bg-orange-50 py-2.5 text-sm font-semibold text-orange-700 transition;
+  }
+
+  .time-slot-inactive {
+    @apply rounded-xl border border-zinc-200 bg-white py-2.5 text-sm font-medium text-zinc-600 transition hover:border-zinc-300 hover:bg-zinc-50;
+  }
+
+  .occasion-pill-active {
+    @apply rounded-full border-2 border-orange-500 bg-orange-50 px-4 py-2 text-sm font-medium text-orange-700 transition;
+  }
+
+  .occasion-pill-inactive {
+    @apply rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-600 transition hover:border-zinc-300 hover:bg-zinc-50;
+  }
+
+  .btn-primary {
+    @apply inline-flex w-full items-center justify-center gap-2 rounded-xl bg-orange-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-orange-500/25 transition hover:bg-orange-400 hover:shadow-orange-500/30 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto;
+  }
+}
